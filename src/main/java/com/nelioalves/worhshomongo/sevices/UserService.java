@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.nelioalves.worhshomongo.domain.User;
 import com.nelioalves.worhshomongo.repository.UserRepository;
+import com.nelioalves.worhshomongo.sevices.exception.ObjectNotFoundException;
 
 @Service
 public class UserService {
@@ -18,4 +19,13 @@ public class UserService {
 		return repo.findAll();
 		
 	}
-}
+	
+	public User findById(String id) {
+	    return repo.findById(id).orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
+	  
+	}
+
+	
+		
+	}
+
