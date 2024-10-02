@@ -1,7 +1,5 @@
 package com.nelioalves.worhshomongo.dto;
 
-import java.util.Objects;
-
 import com.nelioalves.worhshomongo.domain.User;
 
 public class UserDTO {
